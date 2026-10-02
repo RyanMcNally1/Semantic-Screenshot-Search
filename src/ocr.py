@@ -1,10 +1,22 @@
 import pytesseract
-from PIL import Image
+from PIL import Image, UnidentifiedImageError
 
 def ocr_image(image_path):
-    image = Image.open(image_path)
-    text = pytesseract.image_to_string(image)
-    return text
+    try:
+        image = Image.open(image_path)
+        text = pytesseract.image_to_string(image)
+        if not text.strip():
+            return "No text found in the image."
+        return text
+    
+    except FileNotFoundError:
+        return "Error: Image file not found."
+    
+    except UnidentifiedImageError:
+        return "Error: File is not a valid image."
+
+    except Exception as e:
+        return f"Error while performing OCR: {e}"
 
 def main():
     print("Input image path:")

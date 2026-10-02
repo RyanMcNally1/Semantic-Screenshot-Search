@@ -1,0 +1,88 @@
+# OCR Evaluation
+
+## Purpose
+
+The purpose of this is to test the baseline OCR functionality. 
+The tests focused on whether Tesseract could extract useful text 
+from several different types of screenshots and identify situations
+where OCR performance begins to fail.
+
+No image preprocessing or specialized Tesseract configuration was used for
+these tests.
+
+## Test Images
+
+The test set included several types of images with varying levels of
+complexity:
+
+- A simple image containing a single word
+- A simple image containing a short sentence
+- A screenshot of a formatted project plan
+- A screenshot of a completed online survey
+- A screenshot of a course completion email
+- Screenshots containing more complicated or stylized text
+- A screenshot containing source code and line numbers
+- A blank image containing no readable text
+- A text file used to test invalid image handling
+
+## Results
+
+### Simple Text
+
+Tesseract performed well when text was clearly visible and used a
+conventional font. The simple single-word and sentence tests were
+easily recognized, which tells us that OCR is propery functioning.
+
+### Real-World Screenshots
+
+Tesseract was generally able to extract useful text from screenshots
+containing normal webpage and document content. The OCR did not need to
+reproduce every aspect of the screenshot's formatting for the extracted 
+text to remain useful.
+
+### Obscured Text
+
+Recognition became less reliable when text was partially obscured.
+Characters and words could be misread or omitted entirely when Tesseract
+could not clearly distinguish the text from the surrounding image.
+
+### Unorthodox or Stylized Fonts
+
+Tesseract had greater difficulty recognizing text that used unusual or
+highly stylized fonts. Compared with conventional fonts, these images resulted in more
+misidentified characters and missed text.
+
+### Source Code
+
+OCR performance also decreased when processing a screenshot containing
+source code. In particular, line numbers and other nearby elements appeared to interfere
+with recognition. Some portions of the code were misread or not detected.
+
+### Blank Image
+
+A blank image was used to test how the program behaves when given a valid
+image containing no readable text. Tesseract did not produce useful OCR text, 
+and the program correctly handled the no-text case.
+
+### Invalid File
+
+A text file was provided to the OCR function to test how the program handles
+a file that is not a valid image. The program correctly detected the invalid image
+input and used the appropriate error handling instead of attempting to process it normally.
+
+## Observations
+
+The baseline OCR implementation works well when text is clearly visible,
+uses a conventional font, and is presented in a relatively simple layout.
+
+OCR accuracy begins to decrease when:
+
+- Text is obscured
+- Fonts are unusual or stylized
+- The image contains complicated layouts
+- Other nearby text or interface elements interfere with recognition
+
+These limitations do not necessarily prevent the OCR output from being
+useful for Semantic Screenshot Search. The application primarily needs to
+extract enough meaningful text from a screenshot for it to be indexed and
+retrieved later.
