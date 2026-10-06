@@ -1,0 +1,52 @@
+[
+    {
+        "filename": "certificate.png",
+        "path": "sample_data\\certificate.png",
+        "text": "Udemy\n\nHi Ryan,\n\nCongratulations, you unlocked your certificate of completion for \"ROS 2 for\nBeginners (ROS Jazzy - 2026)\".\n\nDelivered by Udemy 600 Harrison Street, 3rd Floor, San Francisco, CA 94107.\n"
+    },
+    {
+        "filename": "code.png",
+        "path": "sample_data\\code.png",
+        "text": "2 ee ee ee Ee\n\noven orons\nX \u00ae maingy\n\u2018Fw 2,prHon DevELorER\ngo> pyc\n> tn ietad code\nPp va\n1 console botzip\nB v2zip\nDo stignore\n botmodulepy\nBB covepat\n1 cordeter\n0 contacts\nB vile\ntad Example of workfiv\n@ minpy\neen\n@ READMEMD:\n\n\u00ae@\n\n=a\npr\n\n1\n\n\u00ae maingy 1x proooon-:\n@ mainpy >[. |\nYou, 2 mines ago[ 1 athor Nou)\n\n2 Amport re\n\n2 from pathlib import Path\n\n3 from prettytable import Prettytable\n\n4 from botmodute import Wane, Phone, Birthday, Record, AddressBook\n\n5\n\noF Tables decoration =\n\n5\n\n8\n\n9 def build_tabie(data):\n\na0 \"\"*Ounxuin Gydye PrettyTable ann sadanKoeo cnucKa sanucis.\"\"*\n\nere\n\n2 table = Prettyrabie()\n\nas table.field_names = [\"Nane\", \"Birthday\", \"Phones*]\n\n4 table.min_width.update({\"Name\": 20, \u201cBirthday*: 12, \"Phones\": 4o})\n\na5 data = AddressBook (data)\n\n36 for key in data:\n\nv7 record\n\na8 ane = record.name.vatue\n\na9 record. show_birthday()\n\n20 phones = record.shon_phones()\n\na table.add_row({name, birthday, phones]) j\n\n2 return table\n\n23\n\n2%\n\n25 Decorator\n\n26\n\n27\n\n28\n\n29 9s, *#Func_kwargs):\n\n30 2\n\n31 return func(sfunc_args, **func_knargs)\n\n32 except KeyError as error:\n\n33 return \u201c\\933(1;31m}\\933[0n\".fornat(str(error).strip(\"*\"))\n\n36 except Valuetrror as error:\n\n35 return f*\\933[1;31n{str(error)\\e3si en\n\n36 : Zao Error as error:\n"
+    },
+    {
+        "filename": "menu.png",
+        "path": "sample_data\\menu.png",
+        "text": "FOOD MENU\n\nGrilled Vegetable\nSalmon, Pad Thai\n\nMushroom,\nRisotto }\n\nClassic , Eggplant\nBeef Parmesan\n\nBeverage Dessert\n"
+    },
+    {
+        "filename": "oblivion.png",
+        "path": "sample_data\\oblivion.png",
+        "text": "= Active Quest\nMorning Star 18, 56434\n\nA Voor in Niben Bay\n\nj\n\nt have heard a rumor that a strange doorway has app:\non a small island in the Niben Bay. I should investigate.\n\n"
+    },
+    {
+        "filename": "project.png",
+        "path": "sample_data\\project.png",
+        "text": "Project Plan \u2014 Semantic Screenshot Search\n\nIndependent Al Portfolio Project Plan for Ryan McNally\n\nGoal:\nBuild a polished local Python application that lets users search screenshots by what they remember seeing or\nreading\u2014not by filename.\n\nPurpose:\nA\\local Python application that indexes screenshots and allows users to find them using natural-language\nsearches based on the screenshot's contents rather than its filename.\n"
+    },
+    {
+        "filename": "quest_complete.png",
+        "path": "sample_data\\quest_complete.png",
+        "text": "4 eo) { {\nGuest Completed\n\ntect Orchard Farm\n\nBoasts\n\nX) Without A Scratch\n\nProtect Guards\nEnsure that no Guards\nProtect Property\n\nMake sure no boxes o1\n\n"
+    },
+    {
+        "filename": "simple_sentence.png",
+        "path": "sample_data\\simple_sentence.png",
+        "text": "This text is green\n"
+    },
+    {
+        "filename": "single_word.png",
+        "path": "sample_data\\single_word.png",
+        "text": "Orange\n"
+    },
+    {
+        "filename": "survey_complete.png",
+        "path": "sample_data\\survey_complete.png",
+        "text": "Survey Complete\n\n\u00ab Previous\n\nYour responses have been recorded. If you wish to make any changes, return to your\nsubmitted course evaluation list and edit them from there.\n\nReturn to Course List\n"
+    },
+    {
+        "filename": "terminal.png",
+        "path": "sample_data\\terminal.png",
+        "text": "103x20\n\n"
+    }
+]

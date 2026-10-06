@@ -6,18 +6,14 @@ def ocr_image(image_path):
         image = Image.open(image_path)
         text = pytesseract.image_to_string(image)
         if not text.strip():
-            return "No text found in the image."
+            return None
         return text
     
     except FileNotFoundError:
-        return "Error: Image file not found."
+        print("Error: Image file not found.")
+        return None
     
-    except UnidentifiedImageError:
-        return "Error: File is not a valid image."
-
-    except Exception as e:
-        return f"Error while performing OCR: {e}"
-
+    
 def main():
     print("Input image path:")
     path = input().strip()
