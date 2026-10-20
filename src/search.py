@@ -11,20 +11,37 @@ def load_index():
         index = json.load(file)
     return index
 
-def search_images(model, index, query_embedding):
+def prepare_embeddings(model, index):
     for record in index:
         record["embedding"] = transform(model, record["text"])
+    return index
+
+def search_images(index, query_embedding):
+    for record in index:
         record["score"] = util.cos_sim(query_embedding, record["embedding"]).item()
-        print(f"{record["filename"]} score: {record["score"]:.4f}")
+
+    scored = sorted(
+    index,
+    key=lambda record: record["score"],
+    reverse=True
+    )
+
+    for record in scored[:5]:
+        print(f"{record["filename"]} - {record["score"]:.4f}")
+
 
 def main():
     transformer = SentenceTransformer("all-MiniLM-L6-v2")
-
     image_index = load_index()
-    user_sentence = input("Input search query: ").strip()
-    input_embedding = transform(transformer, user_sentence)
+    embedded_index = prepare_embeddings(transformer, image_index)
 
-    search_images(transformer, image_index, input_embedding)
+    while True:
+        user_sentence = input("Type quit to exit\nInput search query: ").strip()
+        if user_sentence == "quit":
+            print("Exiting program...")
+            break
+        input_embedding = transform(transformer, user_sentence)
+        search_images(embedded_index, input_embedding)
 
 if __name__ == "__main__":
     main()
