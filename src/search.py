@@ -25,9 +25,7 @@ def search_images(index, query_embedding):
     key=lambda record: record["score"],
     reverse=True
     )
-
-    for record in scored[:5]:
-        print(f"{record["filename"]} - {record["score"]:.4f}")
+    return scored[:5]
 
 
 def main():

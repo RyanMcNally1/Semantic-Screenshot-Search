@@ -1,3 +1,4 @@
-## pytesseract
-## pillow
-## sentence-transformers
+pytesseract
+Pillow
+sentence-transformers
+streamlit

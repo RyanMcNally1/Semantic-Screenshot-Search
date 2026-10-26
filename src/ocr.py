@@ -1,5 +1,7 @@
 import pytesseract
-from PIL import Image, UnidentifiedImageError
+from PIL import Image
+
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 def ocr_image(image_path):
     try:
@@ -18,7 +20,7 @@ def main():
     print("Input image path:")
     path = input().strip()
     ocr_result = ocr_image(path)
-    print("OCR Result: " + ocr_result)
+    print(f"OCR Result: {ocr_result}")
 
 
 if __name__ == "__main__":
